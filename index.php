@@ -6,9 +6,11 @@
 	
 	if (file_exists($wd . 'barcodeWB.txt'))  unlink($wd . 'barcodeWB.txt');
     	if (file_exists($wd . 'barcodeOZ.txt'))  unlink($wd . 'barcodeOZ.txt');
-	
-	require_once  __DIR__ . '/vendor/autoload.php';
-	$googleAccountKeyFilePath = __DIR__ . '/serviceacc.json';
+	/* 
+ 	*	библиотека для работы с гугл таблицами и файл авторизации
+	*	require_once  __DIR__ . '/vendor/autoload.php';
+	*	$googleAccountKeyFilePath = __DIR__ . '/serviceacc.json';
+	*/
 	putenv( 'GOOGLE_APPLICATION_CREDENTIALS=' . $googleAccountKeyFilePath );
 	$wb_api_key = '==== your API_KEY ====';
 	$client_id = '==== your OZON client_id ====';
